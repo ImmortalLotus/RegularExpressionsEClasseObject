@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ByteBank.Modelos</name>
+    </assembly>
+    <members>
+        <member name="T:ByteBank.Modelos.ContaCorrente">
+            <summary>
+            Define os métodos de funcionamento para uma conta corrente no banco ByteBank
+            </summary>
+        </member>
+        <member name="M:ByteBank.Modelos.ContaCorrente.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Cria uma instância de conta corrente com os argumentos aqui informados.
+            </summary>
+            <param name="agencia">Deve possuir um valor maior que zero, representa o valor da <see cref="P:ByteBank.Modelos.ContaCorrente.Agencia"/> da Conta</param>
+            <param name="numero">Deve possuir um valor maior que zero, representa o valor do <see cref="P:ByteBank.Modelos.ContaCorrente.Numero"/> da conta.</param>
+        </member>
+    </members>
+</doc>
