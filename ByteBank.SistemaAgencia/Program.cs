@@ -9,6 +9,8 @@ namespace ByteBank.SistemaAgencia
         {
             Console.WriteLine("Hello World!");
             ContaCorrente conta = new ContaCorrente(12,12);
+            string url ="pagina?argumentos";
+            string argumentos = url.Substring(6);
         }
     }
 }
