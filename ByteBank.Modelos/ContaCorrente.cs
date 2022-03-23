@@ -105,6 +105,11 @@ namespace ByteBank.Modelos
 
             contaDestino.Depositar(valor);
         }
+
+        public override string ToString()
+        {
+            return "A Agência desta conta é: "+Agencia+", e o Número desta conta é: "+Numero;
+        }
     }
 
 }
