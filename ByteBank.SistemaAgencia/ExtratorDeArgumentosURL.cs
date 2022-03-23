@@ -23,14 +23,17 @@ namespace ByteBank.SistemaAgencia
 
         public string GetValor(string nomeParametro)
         {
+            nomeParametro = nomeParametro.ToUpper();
+            string argumentosEmCaixaAlta = _argumentos.ToUpper();
+
             string argumento = nomeParametro + "=";
             //Porque se vier só 'nome', e for buscar na url e ela for:
             //www.blabla.com/cadastro?email=nome&nome=ze, vai acontecer um negócio esquisito
-            int indiceArg = _argumentos.IndexOf(argumento);
+            int indiceArg = argumentosEmCaixaAlta.IndexOf(argumento);
             //basicamente pega o index dá última letra de um texto, existe porque
             //é o jeito mais 'eficiente' de automatizar isso.
             //O que acontece é que ele procura dentro de _argumentos o texto argumento e pega o índex de onde isso começa.
-            string resultado = _argumentos.Substring(indiceArg + argumento.Length);
+            string resultado = argumentosEmCaixaAlta.Substring(indiceArg + argumento.Length);
             int indexEComercio = resultado.IndexOf('&');
 
             if (indexEComercio == -1)
